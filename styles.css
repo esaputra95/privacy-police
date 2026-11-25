@@ -1,0 +1,214 @@
+@layer base, layout, components;
+
+:root {
+  --bg-light: #ffffff;
+  --bg-dark: #0f1419;
+  --surface-light: #f6f8fa;
+  --surface-dark: #161d24;
+  --text-light: #1f2328;
+  --text-dark: #e6edf3;
+  --muted-light: #59636e;
+  --muted-dark: #9198a1;
+  --border-light: #d1d9e0;
+  --border-dark: #30363d;
+  --accent-light: #0969da;
+  --accent-dark: #58a6ff;
+
+  --color-bg: var(--bg-light);
+  --color-surface: var(--surface-light);
+  --color-text: var(--text-light);
+  --color-muted: var(--muted-light);
+  --color-border: var(--border-light);
+  --color-accent: var(--accent-light);
+
+  @media (prefers-color-scheme: dark) {
+    --color-bg: var(--bg-dark);
+    --color-surface: var(--surface-dark);
+    --color-text: var(--text-dark);
+    --color-muted: var(--muted-dark);
+    --color-border: var(--border-dark);
+    --color-accent: var(--accent-dark);
+  }
+
+  @supports (color: light-dark(white, black)) {
+    --color-bg: light-dark(var(--bg-light), var(--bg-dark));
+    --color-surface: light-dark(var(--surface-light), var(--surface-dark));
+    --color-text: light-dark(var(--text-light), var(--text-dark));
+    --color-muted: light-dark(var(--muted-light), var(--muted-dark));
+    --color-border: light-dark(var(--border-light), var(--border-dark));
+    --color-accent: light-dark(var(--accent-light), var(--accent-dark));
+  }
+
+  color-scheme: light dark;
+}
+
+@layer base {
+  html {
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.65;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    accent-color: var(--color-accent);
+  }
+
+  body {
+    margin: 0;
+  }
+
+  h1, h2, h3 {
+    line-height: 1.25;
+    margin-block: 0;
+  }
+
+  h1 {
+    font-size: clamp(1.625rem, 3vw, 2.125rem);
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    margin-block-start: 2rem;
+    margin-block-end: 0.75rem;
+  }
+
+  h3 {
+    font-size: 1.05rem;
+    margin-block-start: 1.25rem;
+    margin-block-end: 0.5rem;
+  }
+
+  p, ul, ol {
+    margin-block: 0 1rem;
+  }
+
+  ul, ol {
+    padding-inline-start: 1.5rem;
+  }
+
+  li:not(:last-child) {
+    margin-block-end: 0.4rem;
+  }
+
+  li > ul {
+    margin-block-start: 0.4rem;
+    margin-block-end: 0.4rem;
+  }
+
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.9em;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    padding: 0.1em 0.35em;
+  }
+
+  a {
+    color: var(--color-accent);
+    text-underline-offset: 0.2em;
+  }
+
+  a:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+}
+
+@layer layout {
+  .container {
+    max-inline-size: 46rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+
+  .site-header {
+    border-block-end: 1px solid var(--color-border);
+    padding-block: 1rem;
+    margin-block-end: 2rem;
+  }
+
+  .site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem 1.5rem;
+  }
+
+  .site-brand {
+    font-weight: 600;
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    margin-block: 0;
+    padding-inline-start: 0;
+  }
+
+  .nav-links li:not(:last-child) {
+    margin-block-end: 0;
+  }
+
+  main {
+    padding-block-end: 3rem;
+  }
+
+  .site-footer {
+    border-block-start: 1px solid var(--color-border);
+    padding-block: 1.5rem;
+    color: var(--color-muted);
+    font-size: 0.9rem;
+  }
+}
+
+@layer components {
+  .meta {
+    color: var(--color-muted);
+    font-size: 0.95rem;
+    margin-block: 0.5rem 1.75rem;
+  }
+
+  .notice {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin-block-end: 1.75rem;
+  }
+
+  .notice p:last-child {
+    margin-block-end: 0;
+  }
+
+  .app-list {
+    display: grid;
+    gap: 1rem;
+    list-style: none;
+    padding-inline-start: 0;
+    margin-block-start: 1.5rem;
+  }
+
+  .app-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1.25rem;
+  }
+
+  .app-card h2 {
+    margin-block-start: 0;
+    margin-block-end: 0.35rem;
+    font-size: 1.15rem;
+  }
+
+  .app-card p {
+    margin-block-end: 0.75rem;
+    color: var(--color-muted);
+  }
+}

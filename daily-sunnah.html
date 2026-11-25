@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Kebijakan Privasi — Daily Sunnah</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-nav">
+      <a class="site-brand" href="/">Privacy Policies</a>
+      <nav aria-label="Aplikasi">
+        <ul class="nav-links">
+          <li><a href="/office">Office</a></li>
+          <li><a href="/crm">CRM</a></li>
+          <li><a href="/daily-sunnah" aria-current="page">Daily Sunnah</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <article>
+      <h1>Kebijakan Privasi — Daily Sunnah</h1>
+      <p class="meta">Tanggal Berlaku: 25 November 2026 &middot; Pengembang: Eko Saputra</p>
+
+      <div class="notice">
+        <p><strong>Nama Aplikasi:</strong> Daily Sunnah<br>
+        <strong>ID Paket:</strong> <code>id.kasirq.dailysunnah</code></p>
+      </div>
+
+      <p>Kebijakan Privasi ini menjelaskan bagaimana aplikasi <strong>Daily Sunnah</strong> (&ldquo;Kami&rdquo; atau &ldquo;Aplikasi&rdquo;) mengelola informasi saat Anda menggunakan aplikasi Android kami. Kami berkomitmen untuk melindungi privasi Anda dan menjaga transparansi mengenai cara kerja aplikasi.</p>
+
+      <h2>1. Ringkasan Singkat</h2>
+      <ul>
+        <li><strong>Tanpa Akun &amp; Tanpa Login:</strong> Daily Sunnah tidak memerlukan pendaftaran akun atau login.</li>
+        <li><strong>Tanpa Iklan &amp; Tanpa Pelacak Analitik:</strong> Aplikasi tidak menggunakan SDK periklanan maupun SDK pelacakan analitik pihak ketiga.</li>
+        <li><strong>Data Tersimpan Lokal di Perangkat:</strong> Progres bacaan Al-Qur&rsquo;an, penanda ayat (<span lang="en">bookmark</span>), riwayat perhitungan zakat tabungan, daftar kajian tersimpan, dan cache konten disimpan secara lokal di perangkat Anda.</li>
+      </ul>
+
+      <h2>2. Informasi yang Diproses dan Disimpan</h2>
+
+      <h3>a. Data yang Disimpan Secara Lokal di Perangkat</h3>
+      <p>Aplikasi menyimpan data berikut secara lokal menggunakan penyimpanan internal aplikasi dan <code lang="en">SharedPreferences</code> (dengan <code lang="en">allowBackup="false"</code>, sehingga tidak dicadangkan otomatis oleh sistem ke cloud):</p>
+      <ul>
+        <li>
+          <strong>Preferensi &amp; Progres Bacaan Al-Qur&rsquo;an:</strong>
+          Halaman Mushaf terakhir yang dibuka, pengaturan tampilan pembaca, target halaman bacaan harian, status penyelesaian halaman harian, dan jadwal pengingat bacaan.
+        </li>
+        <li>
+          <strong>Penanda Ayat (<span lang="en">Bookmark</span>):</strong>
+          Daftar ayat (surah:ayat) dan halaman yang Anda tandai secara manual.
+        </li>
+        <li>
+          <strong>Riwayat &amp; Input Kalkulator Zakat Tabungan:</strong>
+          Nominal tabungan, harga emas per gram, tanggal/sumber harga emas, konfirmasi haul dan kepemilikan, serta hasil perhitungan nisab dan zakat (maksimal 50 riwayat terakhir yang Anda simpan secara manual). Data finansial ini tidak pernah dikirim ke server kami.
+        </li>
+        <li>
+          <strong>Cache Katalog Kajian &amp; Aset Mushaf:</strong>
+          Gambar halaman Mushaf (WebP) dan data tata letak (JSON) yang diunduh dari CDN kami disimpan di penyimpanan internal perangkat agar dapat dibaca secara offline. Daftar katalog video kajian yang telah disetujui dan daftar video yang Anda simpan juga disimpan sementara secara lokal di perangkat (cache katalog hingga 29 hari).
+        </li>
+      </ul>
+
+      <h3>b. Data yang Tidak Kami Kumpulkan</h3>
+      <p>Kami tidak mengumpulkan, menyimpan, atau menjual:</p>
+      <ul>
+        <li>Nama, alamat email, nomor telepon, atau identitas pribadi lainnya;</li>
+        <li>Data lokasi (GPS atau lokasi berbasis jaringan);</li>
+        <li>Kontak, foto, kamera, atau mikrofon;</li>
+        <li>Data transaksi pembayaran atau informasi kartu;</li>
+        <li>Riwayat input kalkulator zakat atau aktivitas bacaan Al-Qur&rsquo;an ke server kami.</li>
+      </ul>
+
+      <h2>3. Izin Aplikasi (<span lang="en">Permissions</span>)</h2>
+      <p>Aplikasi hanya meminta izin Android yang diperlukan untuk menjalankan fiturnya:</p>
+      <ul>
+        <li>
+          <code lang="en">INTERNET</code>:
+          Digunakan untuk mengunduh aset halaman Mushaf dari CDN, mengambil daftar katalog kajian yang telah disetujui, memuat gambar thumbnail video, serta memutar video kajian melalui pemutar YouTube tersemat (<span lang="en">embedded player</span>).
+        </li>
+        <li>
+          <code lang="en">POST_NOTIFICATIONS</code>:
+          Digunakan untuk menampilkan notifikasi pengingat lokal target bacaan Al-Qur&rsquo;an harian sesuai jadwal yang Anda atur sendiri.
+        </li>
+        <li>
+          <code lang="en">RECEIVE_BOOT_COMPLETED</code>:
+          Digunakan untuk menjadwalkan ulang pengingat bacaan Al-Qur&rsquo;an lokal setelah perangkat dinyalakan ulang, aplikasi diperbarui, atau waktu/zona waktu perangkat berubah.
+        </li>
+      </ul>
+
+      <h2>4. Layanan Pihak Ketiga dan Koneksi Jaringan</h2>
+      <p>Saat Anda menggunakan fitur online dalam Aplikasi, perangkat Anda akan terhubung ke layanan berikut:</p>
+      <ul>
+        <li>
+          <strong>CDN Aset Mushaf (<code>quran-cdn.kasirq.id</code>):</strong>
+          Digunakan untuk mengunduh gambar halaman Mushaf dan file tata letak JSON (<code lang="en">GET</code>). Aplikasi tidak mengirimkan data pribadi pengguna pada permintaan ini, namun komunikasi jaringan standar melalui HTTPS secara teknis melibatkan alamat IP dan informasi permintaan jaringan standar.
+        </li>
+        <li>
+          <strong>Backend Katalog Kajian (Supabase):</strong>
+          Digunakan secara <span lang="en">read-only</span> (<code lang="en">GET</code>) untuk mengambil daftar video kajian berstatus disetujui (<span lang="en">approved</span>). Aplikasi tidak mengirimkan data profil pengguna atau riwayat tontonan ke Supabase.
+        </li>
+        <li>
+          <strong>Pemutar Video YouTube Tersemat &amp; Thumbnail (<code>www.youtube.com</code>, <code>i.ytimg.com</code>, <code>img.youtube.com</code>):</strong>
+          Pemutaran video kajian dan Shorts menggunakan Android <span lang="en">WebView</span> dengan <span lang="en">YouTube Embedded IFrame Player</span> (<code lang="en">domStorageEnabled</code> aktif untuk kebutuhan pemutar video). Saat Anda memuat atau memutar video kajian, pihak ketiga (Google / YouTube) dapat menerima data teknis seperti alamat IP, informasi perangkat/WebView, cookie atau penyimpanan lokal pemutar, serta interaksi pemutaran video sesuai dengan:
+          <ul>
+            <li><a href="https://policies.google.com/privacy" rel="noopener noreferrer">Kebijakan Privasi Google</a></li>
+            <li><a href="https://www.youtube.com/t/terms" rel="noopener noreferrer">Persyaratan Layanan YouTube</a></li>
+          </ul>
+        </li>
+        <li>
+          <strong>Fitur Berbagi &amp; Tautan Eksternal:</strong>
+          Saat Anda menekan tombol Bagikan (referensi ayat, ringkasan perhitungan zakat, atau tautan video kajian), Aplikasi menggunakan dialog berbagi bawaan sistem Android (<code lang="en">Intent.ACTION_SEND</code>) menuju aplikasi tujuan yang Anda pilih sendiri. Tautan referensi eksternal (seperti referensi perhitungan zakat BAZNAS) dibuka atas tindakan Anda sendiri melalui browser/aplikasi di perangkat.
+        </li>
+      </ul>
+
+      <h2>5. Penyimpanan, Keamanan, dan Penghapusan Data</h2>
+      <ul>
+        <li>Seluruh data preferensi, progres bacaan, bookmark, dan riwayat zakat tersimpan di ruang penyimpanan privat aplikasi pada perangkat Anda.</li>
+        <li>Seluruh koneksi ke CDN Mushaf, Supabase, dan YouTube dilakukan melalui protokol terenkripsi HTTPS.</li>
+        <li>
+          <strong>Cara Menghapus Data:</strong> Karena kami tidak menyimpan data Anda di server, Anda memiliki kendali penuh untuk menghapus seluruh data kapan saja dengan:
+          <ul>
+            <li>Menghapus item langsung di dalam aplikasi (seperti bookmark, riwayat zakat, atau video tersimpan);</li>
+            <li>Menghapus data/cache aplikasi melalui <strong>Pengaturan Android &gt; Aplikasi &gt; Daily Sunnah &gt; Penyimpanan &gt; Hapus Data</strong>; atau</li>
+            <li>Menghapus instalasi (<span lang="en">Uninstall</span>) aplikasi dari perangkat Anda.</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>6. Privasi Anak</h2>
+      <p>Aplikasi ini bersifat umum dan tidak secara khusus menargetkan anak-anak di bawah usia 13 tahun (atau usia minimum yang berlaku di yurisdiksi Anda), serta tidak secara sadar mengumpulkan informasi pribadi dari anak-anak.</p>
+
+      <h2>7. Perubahan pada Kebijakan Privasi Ini</h2>
+      <p>Kami dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu jika terdapat penambahan fitur (misalnya fitur akun, sinkronisasi cloud, atau paket audio/terjemahan baru). Setiap perubahan akan diperbarui pada halaman ini beserta Tanggal Berlaku yang baru.</p>
+
+      <h2>8. Hubungi Kami</h2>
+      <p>Jika Anda memiliki pertanyaan, masukan, atau permintaan terkait Kebijakan Privasi ini, silakan hubungi pengembang melalui:</p>
+      <ul>
+        <li><strong>Nama Pengembang:</strong> Eko Saputra</li>
+        <li><strong>Email:</strong> <a href="mailto:Ekosaputra.t.i@gmail.com">Ekosaputra.t.i@gmail.com</a></li>
+      </ul>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Eko Saputra &middot; Daily Sunnah. <a href="/">Semua Kebijakan Aplikasi</a></p>
+    </div>
+  </footer>
+</body>
+</html>
