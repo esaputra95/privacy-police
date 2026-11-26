@@ -7,3 +7,4 @@ Static Privacy Policy pages for Google Play applications, configured for deploym
 - `/office` — Office App Privacy Policy
 - `/crm` — CRM App Privacy Policy
 - `/daily-sunnah` — Daily Sunnah Privacy Policy (`id.kasirq.dailysunnah`)
+- `/mahjong-zen` — Mahjong Zen Privacy Policy (`com.mahjongzen.app`)
